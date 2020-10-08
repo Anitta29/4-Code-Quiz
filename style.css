@@ -3,3 +3,14 @@
     color: red;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+body {
+    text-align: center;
+}
+.btn {
+    border-color: blueviolet;
+    margin: 0 20px;
+    
+}
+input {
+    margin: 0 20px;
+}
