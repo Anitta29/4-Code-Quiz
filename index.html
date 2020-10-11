@@ -4,43 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
   <link href="./style.css" rel="stylesheet">
   <title>Document</title>
 </head>
 
 <body>
-  <h1>Code Quiz</h1>
-  <h2>Welcome to Code Quiz! Please answer the following questions</h2>
+  <header>
+    <h1 style="color: white">USA Knowledge Quiz</h1>
+    <p style="color: white">Welcome to USA Knowledge Quiz! Please answer the following questions</p>
+  </header>
 
-  <div class="container">
+  <div class="col-md-4" id="col-1"></div>
+  <div class="col-md-4" id="col-2">
+
     <div id="timer"></div>
-    <div id="question-container" class="hide">
-      <div id="question">Questions</div>
-      <div id="alerts"></div>
+    <div class="container">
+      <div id="question-container" class="hide">
+        <div id="question">Questions:</div>
+        <div id="alerts"></div>
         <div id="answer-buttons" class="btn-grid">
           <!-- <button class="btn">Answer 1</button>
           <button class="btn">Answer 2</button>
           <button class="btn">Answer 3</button>
           <button class="btn">Answer 4</button> -->
         </div>
-     
-<div id="question-results"></div>
+      </div>
+      <div id="question-results"></div>
     </div>
     <div class="controls">
       <input placeholder="name" id="name" />
-    
-    <button id="submit">Submit</button>
-    <div>
-      <h4 id="response"></h4>
-      
-      
+
+      <button id="submit">Submit</button>
+      <div>
+        <h4 id="response"></h4>
+
+        <button class="start-button" id="start-button">Start</button>
+      </div>
     </div>
-
-
-
   </div>
+  <div class="col-md-4" id="col-3"></div>
+
 
 
 
@@ -54,6 +61,8 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
   <script src="./script.js"> </script>
+
+
 </body>
 
 </html>

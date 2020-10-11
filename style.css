@@ -1,16 +1,85 @@
 *, *::Before, ::after {
     box-sizing: border-box;
-    color: red;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Piedra', cursive;
+}
+header  {
+    font-family: 'Piedra', cursive;
+    background-image: url(./images/nightny.jpg);
+    background-size: cover;
+    margin-bottom: -20px;
+}
+h1 {
+    font-size: 60px;
+}
+p {
+    font-size: 40px;
+    padding-bottom: 20px;
 }
 body {
     text-align: center;
+    font-family: 'Piedra', cursive;
+    color: white;
+    
+    
 }
+
 .btn {
-    border-color: blueviolet;
+    border-color:white;
     margin: 0 20px;
+    color: white;
+    font-size: 35px;
     
 }
 input {
     margin: 0 20px;
+}
+#col-1 {
+    background-image: url(./images/monumentValley.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 0;
+    image-resolution: 100%;
+    float: left;
+}
+#col-2 {
+    background-image: url(./images/bridge.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 0;
+    float: left;
+    font-family: 'Piedra', cursive;
+    font-size: 30px;
+}
+#col-3 {
+    background-image: url(./images/oahu.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 0;
+    image-resolution: 100%;
+    float: left;
+}
+.container {
+    width: 800px;
+    max-width: 80%;
+    padding: 10px;
+    box-shadow: 0 0 1;
+    color: white;
+    font-family: 'Piedra', cursive;
+}
+.container-question
+
+.btn-grid {
+    display: grid;
+    padding: 20px;
+    font-size: 60px;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    font-family: 'Piedra', cursive;
+    font-size: 50px;
+}
+#response {
+    color: white;
 }

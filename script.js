@@ -1,4 +1,4 @@
-// create questions
+// creating questions
 
 var questions = [
     {
@@ -28,7 +28,8 @@ var questions = [
     },
 ];
 
-
+var startButton = document.querySelector("#start-button");
+var questContainerEl = document.querySelector("#question-container");
 var questionEl = document.querySelector("#question");
 var answerButton = document.querySelector("#answer-buttons");
 var questionResultEl = document.querySelector("#question-result");
@@ -36,40 +37,48 @@ var timerEl = document.querySelector("#timer");
 var alerts = document.querySelector("#alerts");
 
 
+startButton.addEventListener("click", startGame);
+
+
+
 // setting var for future use
 
 var questCount = 0;
 var correctAn = 0;
-var time = 20;
+var time = 60;
 var intervalId;
 var questionIndex = 0;
 var rightAnswer = "";
 var userAnswer = "";
-var highScore = 0;
+var scores = 0;
+
 
 
 function startGame() {
-    updateTime();
+    startButton.classList.add("hide");
     showQuestions(questions);
-
+    updateTime();
 }
 
 function endQuiz() {
     clearInterval(intervalId);
-    
-// saving info to my local storage
+
+    // saving info to my local storage
+
+
     var submitEl = document.querySelector("#submit");
     var nameInput = document.querySelector("#name");
     var submissionResponseEl = document.querySelector("#response");
-
     submitEl.addEventListener("click", function (event) {
         event.preventDefault();
 
         console.log(event);
 
+
         var response = nameInput.value + "," + " Your score is " + correctAn;
         submissionResponseEl.textContent = response;
     });
+
 }
 
 // countdown start here
@@ -88,7 +97,6 @@ function nextQuestion() {
         return;
     }
 }
-
 
 // here I'm asking my questions
 function showQuestions(array) {
@@ -112,14 +120,14 @@ function showQuestions(array) {
 
 
 
-intervalId = setInterval(updateTime, 3000);
+intervalId = setInterval(updateTime, 1000);
 
 document.addEventListener("click", function (e) {
     if (e.target && e.target.matches(".btn")) {
         userAnswer = e.target.textContent;
         if (userAnswer === rightAnswer) {
             alerts.textContent = "You are right!"
-console.log("this works")
+            console.log("this works")
 
             correctAn++;
         } else {
@@ -141,13 +149,6 @@ function checkAnswer() {
         correctAn++;
     }
 }
-
-startGame();
-
-
-// saving to local storage
-
-
 
 
 
