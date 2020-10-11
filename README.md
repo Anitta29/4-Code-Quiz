@@ -11,6 +11,8 @@ There are 4 buttons with answers and only one is correct. There's a set timer, s
 - CSS;
 - JavaScript;
 
+# Apppearance
+![](images./screenshot)
 
 # Links
 https://anitta29.github.io/4-Code-Quiz/.
