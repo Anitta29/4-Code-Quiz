@@ -11,6 +11,10 @@ There are 4 buttons with answers and only one is correct. There's a set timer, s
 - CSS;
 - JavaScript;
 
+# Appearance
+<img width="1440" alt="Screen Shot 2020-10-15 at 9 51 11 PM" src="https://user-images.githubusercontent.com/67982161/96203874-ef25a280-0f30-11eb-9b7e-5c3aa3038f07.png">
+
+
 
 # Links
 https://anitta29.github.io/4-Code-Quiz/.
