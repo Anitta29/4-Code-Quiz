@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../05-Bujumbura"
+		},
+		{
+			"path": "../../../06-MovieJSONDump"
+		},
+		{
+			"path": "../../../07-MovieButtonLayout"
+		},
+		{
+			"path": "../../../08-LogMovieName"
+		},
+		{
+			"path": "../../../09-ClickJSON"
+		},
+		{
+			"path": "."
+		}
+	]
+}
