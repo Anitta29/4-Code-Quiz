@@ -1,5 +1,3 @@
-// creating questions
-
 var questions = [
     {
         question: "How many many National Parks are in US?",
@@ -36,39 +34,36 @@ var questionResultEl = document.querySelector("#question-result");
 var timerEl = document.querySelector("#timer");
 var alerts = document.querySelector("#alerts");
 
-
-startButton.addEventListener("click", startGame);
-
-
-
 // setting var for future use
 
 var questCount = 0;
 var correctAn = 0;
-var time = 60;
+var time = 30;
 var intervalId;
 var questionIndex = 0;
 var rightAnswer = "";
 var userAnswer = "";
 var scores = 0;
 
-
+startButton.addEventListener("click", startGame);
 
 function startGame() {
-    startButton.classList.add("hide");
+    // startButton.classList.add("hide");
+    questContainerEl.classList.remove("hide")
     showQuestions(questions);
     updateTime();
+    startButton.classList.add("hide");
 }
 
 function endQuiz() {
     clearInterval(intervalId);
 
     // saving info to my local storage
-
-
     var submitEl = document.querySelector("#submit");
     var nameInput = document.querySelector("#name");
     var submissionResponseEl = document.querySelector("#response");
+    questContainerEl.classList.add("hide")
+    document.getElementById("message").textContent = "Quiz Ended. Please enter your name below";
     submitEl.addEventListener("click", function (event) {
         event.preventDefault();
 
@@ -78,27 +73,26 @@ function endQuiz() {
         var response = nameInput.value + "," + " Your score is " + correctAn;
         submissionResponseEl.textContent = response;
     });
-
 }
 
 // countdown start here
 function updateTime() {
-    time--;
-    timerEl.textContent = time;
-    if (time <= 0) {
-        endQuiz();
-    }
+    console.log("time", time)
+    intervalId = setInterval(function(){
+        console.log(time)
+        document.getElementById("timer").textContent = time;
+        
+        if (time <= 0) {
+            clearInterval(intervalId)
+            endQuiz();
+            questContainerEl.classList.add("hide")
+    document.getElementById("message").textContent = "Game Over";
+        } else {
+            time--;
+        }
+    }, 1000)
 }
 
-
-function nextQuestion() {
-    if (time == 0) {
-        updateTime();
-        return;
-    }
-}
-
-// here I'm asking my questions
 function showQuestions(array) {
     if (questionIndex < array.length) {
         rightAnswer = array[questionIndex].answer
@@ -117,10 +111,7 @@ function showQuestions(array) {
         endQuiz();
     }
 }
-
-
-
-intervalId = setInterval(updateTime, 1000);
+// intervalId = setInterval(updateTime, 1000);
 
 document.addEventListener("click", function (e) {
     if (e.target && e.target.matches(".btn")) {
@@ -149,14 +140,3 @@ function checkAnswer() {
         correctAn++;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
